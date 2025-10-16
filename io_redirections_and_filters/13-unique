@@ -1,2 +1,2 @@
 #!/bin/bash
-sort | uniq -c | awk '$1==1 {print $2}' | sort
+cut -c9- <(grep -w "1" <(uniq -c <(sort)))
